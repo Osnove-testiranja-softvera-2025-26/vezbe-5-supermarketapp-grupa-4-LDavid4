@@ -1,0 +1,43 @@
+User:
+C:\USERS\ADMIN\SOURCE\REPOS\VEZBE-5-SUPERMARKETAPP-GRUPA-4-LDAVID4\OTS2019_SUPERMARKET.TEST\CARTTEST.CS CONTEXT
+using NUnit.Framework;  
+using OTS_Supermarket.Models;  
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+using System.Threading.Tasks;  
+
+namespace OTS_Supermarket.Test  
+{  
+    [TestFixture]  
+    public class CartTest  
+    {  
+        [Test]  
+        public void AddOneToCart_ShouldAddItemToCart_Success()  
+        {  
+            // ARANGE  
+            Cart cart = new Cart();  
+            Monitor monitor = new Monitor("Dell", 200);  
+
+            // ACT  
+            cart.AddOneToCart(monitor);  
+
+            // ASSERT  
+            Assert.That(1, Is.EqualTo(cart.Size));  
+        }  
+    }  
+}  
+
+This file includes the following specific characteristics:
+•	C# version: '7.3'
+•	.NET target: '.NET Framework 4.8'
+Consider these characteristics when generating or modifying code, but only if they are directly relevant to the task.
+---
+
+User:
+Write me 10 tests of or app inside of #c:\users\admin\source\repos\vezbe-5-supermarketapp-grupa-4-ldavid4\ots2019_supermarket.test\carttest.cs-context
+---
+
+Assistant:
+(Analyzed the file and workspace, then added 10 tests to CartTest.cs to cover various scenarios for the Cart class, including adding items, removing items, calculating discounts, and handling exceptions.)
